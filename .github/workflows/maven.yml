@@ -16,8 +16,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./sonar-scanner-maven/maven-basic
 
     steps:
     - uses: actions/checkout@v4
