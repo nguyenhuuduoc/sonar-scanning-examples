@@ -46,7 +46,7 @@ jobs:
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       with:
         args:
-          -Dsonar.projectKey="sonar-scanner-maven"
+          -Dsonar.projectKey=java
           #-Dsonar.sources= # optional, default is project base directory
           #-Dsonar.projectBaseDir= # optional, default is .
           #-Dsonar.tests= # optional. For more info about Code Coverage, please refer to https://docs.sonarcloud.io/enriching/test-coverage/overview/
