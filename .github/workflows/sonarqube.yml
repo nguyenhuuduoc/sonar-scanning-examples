@@ -39,6 +39,9 @@ permissions:
 jobs:
   Analysis:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./sonar-scanner-maven/maven-basic
 
     steps:
       - name: Analyze with SonarQube
