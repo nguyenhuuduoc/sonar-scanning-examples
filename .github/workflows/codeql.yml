@@ -50,7 +50,7 @@ jobs:
         #   build-mode: none
         - language: java-kotlin
           build-mode: manual
-          project_path: [java-app-1, java-app-2, shared-lib]
+          project_path: ["sonar-scanner-maven/maven-basic", "sonar-scanner-maven/maven-multilingual", "sonar-scanner-maven/maven-multimodule"]
         - language: javascript-typescript
           build-mode: none
         # - language: python
@@ -101,7 +101,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
+    - name: Build with Maven (${{ matrix.project_path }})
       if: matrix.build-mode == 'manual' && matrix.project_path != null
       working-directory: ${{ matrix.project_path }}
       run: mvn -B package --file pom.xml
