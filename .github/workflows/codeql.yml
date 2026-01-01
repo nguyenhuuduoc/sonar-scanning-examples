@@ -104,9 +104,7 @@ jobs:
     # Corrected Build Step: No loop needed because the matrix handles it
     - name: Build with Maven
       if: matrix.build-mode == 'manual' && matrix.project_path != null
-      run: |
-        echo "Building project at ${{ matrix.project_path }}"
-        mvn -f "${{ matrix.project_path }}/pom.xml" clean compile -B
+      run: mvn -f "${{ matrix.project_path }}/pom.xml" clean compile -B
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
