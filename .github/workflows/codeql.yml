@@ -114,7 +114,6 @@ jobs:
     - name: Build with Maven
       working-directory: ./sonar-scanner-maven/maven-basic
       if: matrix.build-mode == 'manual'
-      working-directory: ./sonar-scanner-maven/maven-basic
       run: mvn -B package --file pom.xml
 
     - name: Perform CodeQL Analysis
