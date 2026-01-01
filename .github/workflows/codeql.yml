@@ -46,10 +46,8 @@ jobs:
         include:
         - language: actions
           build-mode: none
-        # Analyzes C# code by automatically detecting a build
         - language: csharp
-          build-mode: autobuild
-        # Analyzes Java code directly from the codebase without a build
+          build-mode: none
         - language: java-kotlin
           build-mode: autobuild
         - language: javascript-typescript
