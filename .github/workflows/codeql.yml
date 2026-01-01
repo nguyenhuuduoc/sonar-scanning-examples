@@ -50,7 +50,7 @@ jobs:
         #   build-mode: none
         - language: java-kotlin
           build-mode: manual
-          project_path: ["sonar-scanner-maven/maven-basic", "sonar-scanner-maven/maven-multilingual", "sonar-scanner-maven/maven-multimodule"]
+          project_path: [sonar-scanner-maven/maven-basic, sonar-scanner-maven/maven-multilingual, sonar-scanner-maven/maven-multimodule]
         - language: javascript-typescript
           build-mode: none
         # - language: python
