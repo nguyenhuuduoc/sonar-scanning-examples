@@ -49,7 +49,7 @@ jobs:
         # - language: csharp
         #   build-mode: none
         - language: java-kotlin
-          build-mode: autobuild
+          build-mode: manual
           project_path: [java-app-1, java-app-2, shared-lib]
         - language: javascript-typescript
           build-mode: none
